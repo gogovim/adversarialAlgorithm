@@ -67,7 +67,7 @@ class Recover(nn.Module):
 
 
 class Rectifi(nn.Module):
-    def __init__(self, n_in=3, n_out=3, bit=12):
+    def __init__(self, n_in=3, n_out=3, bit=8):
         super(Rectifi, self).__init__()
         self.com = Compress(n_in, bit)
         self.rec = Recover(bit, n_out)
